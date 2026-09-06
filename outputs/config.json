@@ -1,0 +1,26 @@
+{
+  "image_size": 128,
+  "batch_size": 32,
+  "epochs": 40,
+  "lr": 0.0005,
+  "weight_decay": 0.0001,
+  "base_ch": 16,
+  "dropout": 0.1,
+  "bce_weight": 0.3,
+  "pos_weight": 3.0,
+  "early_stop_patience": 10,
+  "num_workers": 2,
+  "seed": 42,
+  "mean": [
+    0.09524113684892654,
+    0.0840621367096901,
+    0.08780882507562637
+  ],
+  "std": [
+    0.1369909793138504,
+    0.12283788621425629,
+    0.13166500627994537
+  ],
+  "best_val_dice_tumor": 0.7660055075372968,
+  "train_seconds": 2831.888363838196
+}
