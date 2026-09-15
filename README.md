@@ -1,8 +1,10 @@
 # Segmentação de Tumores Cerebrais em MRI com U-Net
 
-**Disciplina:** Redes Neurais Profundas — Atividade 02
-**Aluna:** Leticia Pillar Lisboa
-**Professor:** Felipe André Zeiser
+- **Disciplina:** Redes Neurais Profundas — Atividade 02
+- **Aluna:** Leticia Pillar Lisboa
+- **Professor:** Felipe André Zeiser
+- **Repositório:** https://github.com/leticiapillar/aprendizado-por-reforco-modelagem-mdp
+- **Dataset:** LGG Segmentation Dataset — https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
 
 ---
 
@@ -10,7 +12,8 @@
 
 Trabalho prático de visão computacional que implementa uma **U-Net** para segmentação
 binária (tumor vs. fundo) em imagens de MRI cerebral, usando o **LGG Segmentation
-Dataset** (`datasets/kaggle_3m`).
+Dataset** (`datasets/kaggle_3m`), disponível em
+https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation.
 
 O notebook [`notebook/segmentacao_unet.ipynb`](notebook/segmentacao_unet.ipynb) percorre
 as 5 etapas do exercício:
