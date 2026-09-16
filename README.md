@@ -3,7 +3,7 @@
 - **Disciplina:** Redes Neurais Profundas — Atividade 02
 - **Aluna:** Leticia Pillar Lisboa
 - **Professor:** Felipe André Zeiser
-- **Repositório:** https://github.com/leticiapillar/aprendizado-por-reforco-modelagem-mdp
+- **Repositório:** https://github.com/leticiapillar/redes-neurais-profunda-atividade-02
 - **Dataset:** LGG Segmentation Dataset — https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
 
 ---
@@ -31,6 +31,11 @@ as 5 etapas do exercício:
 > notebook para ver os resultados — não é necessário rodar nada. As instruções da seção 4
 > servem para **reproduzir o experimento do zero**, caso desejado.
 
+> **Prefere não configurar nada localmente?** Use o
+> [`notebook/segmentacao_unet_colab.ipynb`](notebook/segmentacao_unet_colab.ipynb) — versão
+> pronta para o Google Colab, que clona o repositório e instala as dependências sozinha (veja
+> a seção 5.4).
+
 ## 2. Resultados
 
 Modelo treinado por 40 épocas (early stopping habilitado), imagens 128×128, ~47 min em CPU.
@@ -53,7 +58,8 @@ e reproduzidos dentro do notebook.
 .
 ├── datasets/kaggle_3m/          # dataset original (imagem + máscara .tif por paciente)
 ├── notebook/
-│   └── segmentacao_unet.ipynb   # notebook com as 5 etapas do exercício (já executado)
+│   ├── segmentacao_unet.ipynb       # notebook com as 5 etapas do exercício (já executado)
+│   └── segmentacao_unet_colab.ipynb # versão para rodar no Google Colab (self-contained)
 ├── outputs/                     # artefatos gerados pelo treino/avaliação
 │   ├── checkpoints/best_model.pt
 │   ├── figures/                 # curvas de treino e predições de exemplo
@@ -134,6 +140,16 @@ mudar hiperparâmetros). Rodar cada script sobrescreve os arquivos correspondent
 #    não retreina) — ~1-2 min
 .venv/bin/jupyter nbconvert --to notebook --execute --inplace notebook/segmentacao_unet.ipynb
 ```
+
+### 5.4 Executar no Google Colab
+
+Para quem prefere não montar o ambiente localmente (ou quer treinar com GPU), use o
+notebook [`notebook/segmentacao_unet_colab.ipynb`](notebook/segmentacao_unet_colab.ipynb):
+abra-o em https://colab.research.google.com/ (via `File > Upload notebook` ou apontando
+para este repositório) e rode as células em ordem. Ele clona este repositório dentro do
+Colab (dataset, checkpoint e artefatos já incluídos) e instala as dependências
+automaticamente — nenhum passo manual de setup é necessário. Uma seção opcional ao final
+permite retreinar o modelo do zero aproveitando a GPU do Colab.
 
 ## 6. Decisões principais
 
